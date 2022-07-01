@@ -4,10 +4,7 @@ const { ModuleFederationPlugin } = require('webpack').container
 const { dependencies } = require('./package.json')
 
 module.exports = defineConfig({
-  // transpileDependencies: true,
-
   chainWebpack(config) {
-    // config.optimization.delete('splitChunks')
     config
       .plugin('module-federation-plugin')
       .use(ModuleFederationPlugin, [{
